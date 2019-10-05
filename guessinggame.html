@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    
+    <title>Guessing Game</title> 
+    
+    <style> 
+        html { 
+            background-color: teal;
+    font-family: sans-serif; 
+    } 
+      
+        body { 
+   
+    width: 50%; 
+    max-width: 800px; 
+    min-width: 480px; 
+    margin: 0 auto; 
+    } 
+    </style> 
+    
+    
+</head> 
+  
+<body> 
+<div clss="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1>Guess The Number</h1> 
+</div>
+  
+<p>A random number has been chosen between 1 - 10.  
+Can you guess it?</p> 
+  
+<div class="container"> 
+    <label for="guessField">Enter a guess: </label> 
+    <input type = "text" id = "guessField" class = "guessField"> 
+    <input type = "submit" value = "Guess"
+           class = "guessSubmit" id = "submitguess">
+    <input type = "reset" value = "Reset" class = "reset" id = "reset">
+
+</div> 
+  
+<script type = "text/javascript"> 
+  
+    
+    var y = Math.floor(Math.random() * 10 + 1); 
+      
+    
+    var guess = 1; 
+      
+    document.getElementById("submitguess").onclick = function(){ 
+      
+        
+   var x = document.getElementById("guessField").value; 
+  
+   if(x == y) 
+   {     
+       alert(" You got it! "
+               + guess + " Guess "); 
+   } 
+   else if(x > y)
+   {     
+       guess++; 
+       alert("Guess Lower"); 
+   } 
+   else
+   { 
+       guess++; 
+       alert("Guess higher") 
+   } 
+} 
+</script> 
+</body> 
+</html>                     
